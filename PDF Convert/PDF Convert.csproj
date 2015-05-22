@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6DF9221-5DCF-4C38-A315-6D4AFA6B4DBF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDF_Convert</RootNamespace>
+    <AssemblyName>PDF Convert</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=8.2.2.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Pdf, Version=9.7.0.0, Culture=neutral, PublicKeyToken=6947866647e416ec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Aspose.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Slides, Version=14.8.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Aspose.Slides.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=14.9.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="Controls">
+      <HintPath>C:\Users\pc001\Desktop\FileGrid\Controls\bin\Debug\Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Convert.cs" />
+    <Compile Include="Encrypt.cs" />
+    <Compile Include="MainInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainInfo.Designer.cs">
+      <DependentUpon>MainInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reg.cs" />
+    <Compile Include="RegDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegDlg.Designer.cs">
+      <DependentUpon>RegDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPicStatusBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPicStatusBar.Designer.cs">
+      <DependentUpon>ucPicStatusBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPicNavigationBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPicNavigationBar.Designer.cs">
+      <DependentUpon>ucPicNavigationBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPicClearBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPicClearBar.Designer.cs">
+      <DependentUpon>ucPicClearBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTextBoxBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTextBoxBar.Designer.cs">
+      <DependentUpon>ucTextBoxBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTextBoxListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucTextBoxListView.Designer.cs">
+      <DependentUpon>ucTextBoxListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Version.cs" />
+    <Compile Include="PassWordDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassWordDlg.Designer.cs">
+      <DependentUpon>PassWordDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPicButtonBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPicButtonBar.Designer.cs">
+      <DependentUpon>ucPicButtonBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPicBrowseBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPicBrowseBar.Designer.cs">
+      <DependentUpon>ucPicBrowseBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClearListTips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClearListTips.Designer.cs">
+      <DependentUpon>ClearListTips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTips.Designer.cs">
+      <DependentUpon>UpdateTips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegTips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegTips.Designer.cs">
+      <DependentUpon>RegTips.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ClearListTips.en.resx">
+      <DependentUpon>ClearListTips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClearListTips.zh-CN.resx">
+      <DependentUpon>ClearListTips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainInfo.en.resx">
+      <DependentUpon>MainInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainInfo.resx">
+      <DependentUpon>MainInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainInfo.zh-CN.resx">
+      <DependentUpon>MainInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassWordDlg.en.resx">
+      <DependentUpon>PassWordDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassWordDlg.zh-CN.resx">
+      <DependentUpon>PassWordDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegDlg.ar.resx">
+      <DependentUpon>RegDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegDlg.en.resx">
+      <DependentUpon>RegDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegDlg.resx">
+      <DependentUpon>RegDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegDlg.zh-CN.resx">
+      <DependentUpon>RegDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPicStatusBar.resx">
+      <DependentUpon>ucPicStatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPicNavigationBar.resx">
+      <DependentUpon>ucPicNavigationBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPicClearBar.resx">
+      <DependentUpon>ucPicClearBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTextBoxBar.resx">
+      <DependentUpon>ucTextBoxBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PassWordDlg.resx">
+      <DependentUpon>PassWordDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTextBoxListView.resx">
+      <DependentUpon>ucTextBoxListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPicButtonBar.resx">
+      <DependentUpon>ucPicButtonBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPicBrowseBar.resx">
+      <DependentUpon>ucPicBrowseBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClearListTips.resx">
+      <DependentUpon>ClearListTips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTips.en.resx">
+      <DependentUpon>UpdateTips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTips.resx">
+      <DependentUpon>UpdateTips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTips.zh-CN.resx">
+      <DependentUpon>UpdateTips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegTips.resx">
+      <DependentUpon>RegTips.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\afterAddFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\afterConversion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\afterFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startConversion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qingkong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qingkong1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftbg_01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ppt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\html.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filetoimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onlinehover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\liulan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txtBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jinduhui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topbg_02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bootombg_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moneyhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onlinehover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registerhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helphover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qingkonghover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\look.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lookhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startnot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnNormal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registrlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refgistebua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resisterbut1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\liulan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <None Include="Resources\logo_050.png" />
+    <None Include="Resources\logo_05.png" />
+    <None Include="Resources\logo_030.png" />
+    <None Include="Resources\en.jpg" />
+    <None Include="Resources\zh-cn.jpg" />
+    <None Include="Resources\ch-zn.jpg" />
+    <None Include="Resources\emailnew_hover.png" />
+    <None Include="Resources\emailnew.png" />
+    <None Include="Resources\qqhover.png" />
+    <None Include="Resources\qq.png" />
+    <None Include="Resources\phonehover.png" />
+    <None Include="Resources\phone.png" />
+    <None Include="Resources\emailen.png" />
+    <None Include="Resources\emailenhover.png" />
+    <None Include="Resources\qqcnhover.png" />
+    <None Include="Resources\phonecomhover.png" />
+    <None Include="Resources\phonecom.png" />
+    <None Include="Resources\qqcn.png" />
+    <None Include="Resources\updateLogo.png" />
+    <None Include="Resources\zhuce.png" />
+    <None Include="Resources\register1.png" />
+    <None Include="Resources\lookEnable1.png" />
+    <None Include="Resources\regClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
